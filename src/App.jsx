@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { calculatePlan } from './lib/engine';
 import { Header } from './components/Header';
 import { ConfigCard } from './components/ConfigCard';
@@ -68,6 +70,10 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      {/* Vercel Monitoring Tools */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 } 
