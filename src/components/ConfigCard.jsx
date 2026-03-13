@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Wallet, ChevronDown, Check } from 'lucide-react';
+import { Wallet, ChevronDown, Check, RotateCcw } from 'lucide-react';
 
-export const ConfigCard = ({ budget, setBudget, timeframe, setTimeframe, unit, setUnit, mode, setMode }) => {
+export const ConfigCard = ({ budget, setBudget, timeframe, setTimeframe, unit, setUnit, mode, setMode, onReset }) => {
   const [strategyOpen, setStrategyOpen] = useState(false);
   const [unitOpen, setUnitOpen] = useState(false);
 
@@ -106,6 +106,13 @@ export const ConfigCard = ({ budget, setBudget, timeframe, setTimeframe, unit, s
           </div>
         </div>
       </div>
+
+      <button 
+      onClick={onReset}
+      className="w-full mt-4 py-2 flex items-center justify-center gap-2 text-[11px] font-bold text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all border border-dashed border-slate-200 hover:border-red-200"
+    >
+      <RotateCcw size={14} /> Reset Plan to Defaults
+    </button>
     </div>
   );
 };

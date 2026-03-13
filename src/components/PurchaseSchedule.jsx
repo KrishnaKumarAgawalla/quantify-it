@@ -6,7 +6,7 @@ export const PurchaseSchedule = ({ calendar, assets, unitLabel, columnLabel }) =
     <div className="p-4 bg-slate-50 border-b border-slate-200 font-bold text-slate-600 flex items-center gap-2 text-[13px]">
       <Calendar size={16} className="text-indigo-500"/> {unitLabel} Purchase Schedule
     </div>
-    <div className="max-h-[330px] overflow-y-auto">
+    <div className="max-h-[378px] overflow-y-auto">
       <table className="w-full text-[13px]"> 
         <thead className="bg-white sticky top-0 uppercase text-slate-400 text-[10px] font-black border-b border-slate-200 z-10">
           <tr>
