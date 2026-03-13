@@ -7,6 +7,7 @@ import { ConfigCard } from './components/ConfigCard';
 import { AssetCard } from './components/AssetCard';
 import { TargetSummary } from './components/TargetSummary';
 import { PurchaseSchedule } from './components/PurchaseSchedule';
+import { PortfolioChart } from './components/PortfolioChart';
 import { InsightCard } from './components/InsightCard';
 
 export default function App() {
@@ -55,12 +56,15 @@ export default function App() {
               mode={mode} 
             />
 
-            <InsightCard message={recommendation} />
+            <PortfolioChart summary={summary} />
           </div>
 
           {/* Results Area: 7 out of 11 */}
           <div className="lg:col-span-7 space-y-6">
+            <InsightCard message={recommendation} />
+
             <TargetSummary summary={summary} />
+            
             <PurchaseSchedule 
               calendar={calendar} 
               assets={assets} 
