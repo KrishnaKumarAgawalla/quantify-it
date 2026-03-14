@@ -22,7 +22,7 @@ export const TargetSummary = ({ summary }) => (
           {summary.map((s, i) => (
             <tr 
               key={i} 
-              className={`transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-slate-100/50'} hover:bg-indigo-50/50`}
+              className={`transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-slate-100/80'} hover:bg-indigo-50/60`}
             >
               <td className="px-5 py-3">
                 <div className="font-bold text-slate-800">{s.name || 'Unnamed Asset'}</div>
